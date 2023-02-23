@@ -67,6 +67,34 @@ $fw-bold: 600;
 }
 
 body {
+  @media screen and (min-width: 700px) {
+    .supervisor {
+      grid-area: supervisor;
+    }
+    .team {
+      grid-area: team;
+    }
+    .karma {
+      grid-area: karma;
+    }
+    .calculator {
+      grid-area: calculator;
+    }
+    .cards {
+      @include border;
+      display: grid;
+      grid-template-areas: 'supervisor team calculator' 'supervisor karma calculator';
+      .supervisor {
+        margin-top: 50%;
+        margin-bottom: 50%;
+        margin-right: 20px;
+      }
+      .calculator {
+        margin-top: 50%;
+        margin-left: 20px;
+      }
+    }
+  }
   font-family: $font-family;
   width: 85%;
   height: 1200px;
@@ -95,7 +123,6 @@ body {
     .card {
       background-color: white;
       height: 227px;
-      //height: 40%;
       margin-bottom: 15px;
       box-shadow: 1px 7px 5px #dfe7f2;
       padding: 12px;
