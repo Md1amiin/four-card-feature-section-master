@@ -70,7 +70,7 @@ h6 {
 body {
   font-family: "Poppins", sans-serif;
   width: 85%;
-  height: 1200px;
+  height: 100%;
   margin: 50px auto;
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(229deg, 6%, 66%);
