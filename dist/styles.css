@@ -1,7 +1,9 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,7 +17,8 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -32,7 +35,11 @@ body {
 /*
   6. Improve media defaults
 */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -40,14 +47,23 @@ img, picture, video, canvas, svg {
 /*
   7. Remove built-in form typography styles
 */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /*
   8. Avoid text overflows
 */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -58,41 +74,12 @@ body {
   margin: 50px auto;
   background-color: hsl(0deg, 0%, 98%);
   color: hsl(229deg, 6%, 66%);
-  font-size: 15px;
   font-weight: 400;
-}
-@media screen and (min-width: 700px) {
-  body .supervisor {
-    grid-area: supervisor;
-  }
-  body .team {
-    grid-area: team;
-  }
-  body .karma {
-    grid-area: karma;
-  }
-  body .calculator {
-    grid-area: calculator;
-  }
-  body .cards {
-    border: 1px solid red;
-    display: grid;
-    grid-template-areas: "supervisor team calculator" "supervisor karma calculator";
-  }
-  body .cards .supervisor {
-    margin-top: 50%;
-    margin-bottom: 50%;
-    margin-right: 20px;
-  }
-  body .cards .calculator {
-    margin-top: 50%;
-    margin-left: 20px;
-  }
 }
 body main .first {
   color: hsl(234deg, 12%, 34%);
-  font-weight: 200;
-  font-size: 21px;
+  font-weight: 100;
+  font-size: 24px;
   text-align: center;
 }
 body main .second {
@@ -104,6 +91,9 @@ body main .intro {
   text-align: center;
   margin: 20px auto 50px;
   font-size: 15.15px;
+}
+body main .cards {
+  font-size: 13px;
 }
 body main .card {
   background-color: white;
@@ -133,4 +123,49 @@ body main .karma {
 }
 body main .calculator {
   border-top: 3px solid hsl(212deg, 86%, 64%);
+}
+@media screen and (min-width: 700px) {
+  body main .intro {
+    width: 42%;
+  }
+  body main .supervisor {
+    grid-area: supervisor;
+  }
+  body main .team {
+    grid-area: team;
+  }
+  body main .karma {
+    grid-area: karma;
+  }
+  body main .calculator {
+    grid-area: calculator;
+  }
+  body main .first,
+  body main .second {
+    font-size: 36px;
+  }
+  body main .cards {
+    width: 90%;
+    font-size: 15px;
+    margin: auto;
+    display: grid;
+    grid-template-areas: "supervisor team calculator" "supervisor karma calculator";
+  }
+  body main .cards .supervisor {
+    margin-top: 50%;
+    margin-bottom: 50%;
+    margin-right: 20px;
+  }
+  body main .cards .calculator {
+    margin-top: 50%;
+    margin-left: 20px;
+  }
+  body main .cards .card {
+    position: relative;
+  }
+  body main .cards .card .card-image {
+    position: absolute;
+    left: 75%;
+    bottom: 10%;
+  }
 }/*# sourceMappingURL=styles.css.map */
